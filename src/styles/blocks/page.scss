@@ -6,9 +6,13 @@
 
   scroll-behavior: smooth;
 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   &__body {
     margin: 0;
     min-width: 320px;
+    overflow-x: hidden;
   }
 
   &__menu {
@@ -27,5 +31,9 @@
       transform: translateX(0);
       pointer-events: all;
     }
+  }
+
+  &:has(.page__menu:target) {
+    overflow: hidden;
   }
 }

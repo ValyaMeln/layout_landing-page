@@ -1,14 +1,20 @@
 .header {
-  box-sizing: border-box;
+  // display: none !important;
 
-  height: 100vh;
   background-image: url(../imegas/header-bg-mobile.png);
   background-size: cover;
   background-position: center;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  &__content {
+    // @include content-padding-inline;
+    // box-sizing: border-box;
+
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   &__center {
     padding-bottom: 235px;
@@ -18,7 +24,7 @@
     align-items: center;
 
     @include on-tablet {
-      padding-bottom: 64px; // new
+      // padding-bottom: 64px; // new
     }
   }
 
