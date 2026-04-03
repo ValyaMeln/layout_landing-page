@@ -33,16 +33,18 @@
   }
 
   &__phone-number {
-    display: block;
+    display: inline-block;
     color: #fff;
     text-decoration: none;
     font-size: 16px;
     line-height: 27px;
     margin-bottom: 8px;
+
+    @include hover(transform, scale(1.2));
   }
 
   &__call-to-order {
-    margin-top: 16px;
+    margin-top: 8px;
     display: block;
     width: fit-content;
     padding-bottom: 8px;

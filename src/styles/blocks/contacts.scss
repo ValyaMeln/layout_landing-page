@@ -1,4 +1,6 @@
 .form__input {
+  resize: none;
+  font-family: Cinzel, sans-serif;
   box-sizing: border-box;
   width: 100%;
   padding: 14px 10px;
@@ -43,6 +45,8 @@
     @include on-desktop {
       --columns: 12;
     }
+
+    transition: transform 0.3s;
   }
 
   &__content {
@@ -72,19 +76,30 @@
     }
 
     &-phone {
+      display: inline-block;
       text-decoration: none;
       font-weight: 700;
-      font-style: Bold;
       font-size: 16px;
       line-height: 27px;
       color: #3e3e3e;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.2);
+        color: #d12d35;
+      }
     }
+
     &-location {
       text-decoration: none;
       font-weight: 700;
       font-size: 16px;
       line-height: 140%;
       color: #3e3e3e;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.2);
+        color: #d12d35;
+      }
     }
   }
 
@@ -120,8 +135,9 @@
   }
 }
 
-.contact__content-phone:hover,
-.contact__content-location:hover {
-  color: #d12d35;
-  transition: color 0.3s;
-}
+// .contact__content-phone:hover,
+// .contact__content-location:hover {
+//   transform: scale(1.2);
+//   color: #d12d35;
+//   // transition: color 0.3s;
+// }
